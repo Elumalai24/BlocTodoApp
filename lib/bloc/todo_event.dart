@@ -1,18 +1,20 @@
 import '../model/todo.dart';
 
-abstract class TodoEvent{
+abstract class TodoEvent {}
 
+class TodoAddEvent extends TodoEvent {
+  Todo todo;
+  TodoAddEvent(this.todo);
 }
-class TodoAddEvent extends TodoEvent{
- Todo todo;
-TodoAddEvent(this.todo);
+
+class TodoGetEvent extends TodoEvent {}
+
+class TodoUpdateEvent extends TodoEvent {
+  Todo todo;
+  TodoUpdateEvent(this.todo);
 }
-class TodoGetEvent extends TodoEvent{}
-class TodoUpdateEvent extends TodoEvent{
- Todo todo;
- TodoUpdateEvent(this.todo);
-}
-class TodoDeleteEvent extends TodoEvent{
- int? id;
- TodoDeleteEvent(this.id);
+
+class TodoDeleteEvent extends TodoEvent {
+  int? id;
+  TodoDeleteEvent(this.id);
 }

@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'bloc/todo_bloc.dart';
 import 'database/db_helper.dart';
 
-void main()async{
+void main() async {
   runApp(const MyApp());
 }
 
